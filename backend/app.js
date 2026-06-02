@@ -8,11 +8,22 @@ import { dbConnection } from "./database/dbConnection.js";
 const app = express();
 dotenv.config();   // Load environment variables from .env file
 
-app.use(   //
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],//
-    methods: ["POST"],//
-    credentials: true,//
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 app.use(express.json());// to give string data to json data and send to frontend 
