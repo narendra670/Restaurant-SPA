@@ -10,9 +10,14 @@ dotenv.config();   // Load environment variables from .env file
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL || "http://localhost:5173", "http://localhost:5173"].filter(Boolean),
+    origin: [
+      process.env.FRONTEND_URL,
+      "http://localhost:5173",
+      "https://restaurant-spa-wine.vercel.app"
+    ].filter(Boolean),
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(express.json());// to give string data to json data and send to frontend 
