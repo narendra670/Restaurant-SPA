@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import validator from "validator";
+import validator from "validator";  // Import the validator library to validate email addresses
 
 const reservationSchema = new mongoose.Schema({
   firstName: {

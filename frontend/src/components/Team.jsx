@@ -5,6 +5,10 @@ const Team = () => {
     <section className="team" id="team">
       <div className="container">
         <div className="heading_section">
+          <div className="brand">
+            <img src="/logo.svg" alt="Flavora" />
+            <h2>FLAVORA</h2>
+          </div>
           <h1 className="heading">OUR TEAM</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae

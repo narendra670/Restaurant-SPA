@@ -7,7 +7,10 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="logo">ZEESH</div>
+        <div className="logo">
+          <img src="/logo.svg" alt="Flavora" style={{width: "40px", marginRight: "10px"}} />
+          FLAVORA
+        </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {data[0].navbarLinks.map((element) => (

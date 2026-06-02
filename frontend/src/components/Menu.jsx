@@ -6,6 +6,10 @@ const Menu = () => {
       <section className='menu' id='menu'>
         <div className="container">
             <div className="heading_section">
+                <div className="brand">
+                    <img src="/logo.svg" alt="Flavora" />
+                    <h2>FLAVORA</h2>
+                </div>
                 <h1 className="heading">POPULAR DISHES</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, iusto dolorem! Voluptatibus ipsum nam mollitia architecto. Soluta pariatur eius et recusandae veritatis. Quasi, et molestias!</p>
             </div>
